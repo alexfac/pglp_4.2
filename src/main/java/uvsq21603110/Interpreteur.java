@@ -3,10 +3,10 @@ package uvsq21603110;
 import java.util.Stack;
 
 public class Interpreteur {
-    private Stack<Integer> pile;
+    public Stack<Double> pile;
 
     public Interpreteur(){
-        this.pile = new Stack<Integer>();
+        this.pile = new Stack<Double>();
     }
 
     public void exit(){
