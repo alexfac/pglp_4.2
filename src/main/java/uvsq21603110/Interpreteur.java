@@ -13,7 +13,9 @@ public class Interpreteur {
         System.exit(0);
     }
 
-    public void undo(){
-        this.pile.pop();
+    public void undo() {
+        if (this.pile.size() >= 1) {
+            this.pile.pop();
+        }
     }
 }

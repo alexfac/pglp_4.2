@@ -15,6 +15,10 @@ public class Operation_Command implements Commande {
         this.op = op;
     }
 
+    public void registerOperateur(Operation op){
+        this.op = op;
+    }
+
     @Override
     public void apply() {
 

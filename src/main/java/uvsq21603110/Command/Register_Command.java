@@ -13,9 +13,13 @@ public class Register_Command implements Commande {
         this.valeur = valeur;
     }
 
+    public void registerValeur(double valeur){
+        this.valeur = valeur;
+    }
+
     @Override
     public void apply() {
         this.rpn.pile.push(valeur);
-        System.out.println(this.rpn.pile);
+        System.out.println(this.rpn.retourner());
     }
 }
