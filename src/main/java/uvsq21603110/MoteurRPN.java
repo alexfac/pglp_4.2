@@ -1,11 +1,14 @@
 package uvsq21603110;
 
+import java.util.Stack;
+
 public class MoteurRPN extends Interpreteur{
 
     public final static double Max_Value = 99999999;
     public final static double Min_Value = 0;
 
     public MoteurRPN(){
+
         super();
     }
 
@@ -21,6 +24,7 @@ public class MoteurRPN extends Interpreteur{
     }
 
     public void printPile(){
+
         if (pile.size() >= 1){
             for(double elemPile: pile){
                 System.out.print(elemPile);
@@ -38,5 +42,10 @@ public class MoteurRPN extends Interpreteur{
         }
         pile.push(elem);
         printPile();
+    }
+
+    public Stack<Double> retourner(){
+
+        return this.pile;
     }
 }
