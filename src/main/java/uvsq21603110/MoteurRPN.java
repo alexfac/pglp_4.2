@@ -29,4 +29,14 @@ public class MoteurRPN extends Interpreteur{
         }
         else System.out.println("Pile vide");
     }
+
+    public void operation(Operation op){
+
+        double elem = 0;
+        if (pile.size() >= 2){
+            elem = op.eval(pile.pop(), pile.pop());
+        }
+        pile.push(elem);
+        printPile();
+    }
 }
