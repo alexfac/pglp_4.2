@@ -13,6 +13,6 @@ public class Return_Command implements Commande {
 
     @Override
     public void apply() {
-        System.out.println(this.rpn.retourner());
+        this.rpn.retourner();
     }
 }

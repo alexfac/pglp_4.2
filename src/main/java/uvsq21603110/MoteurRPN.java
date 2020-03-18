@@ -17,21 +17,8 @@ public class MoteurRPN extends Interpreteur{
         if ( Math.abs(op1) < Max_Value && Math.abs(op1) >= Min_Value) {
 
             pile.push(op1);
-            printPile();
-            System.out.println();
         }
         else System.out.println("non ajoute à la pile");
-    }
-
-    public void printPile(){
-
-        if (pile.size() >= 1){
-            for(double elemPile: pile){
-                System.out.print(elemPile);
-                System.out.print(" ~ ");
-            }
-        }
-        else System.out.println("Pile vide");
     }
 
     public void operation(Operation op){
@@ -41,7 +28,6 @@ public class MoteurRPN extends Interpreteur{
             elem = op.eval(pile.pop(), pile.pop());
         }
         pile.push(elem);
-        printPile();
     }
 
     public Stack<Double> retourner(){

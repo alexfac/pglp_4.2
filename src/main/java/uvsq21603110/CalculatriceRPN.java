@@ -1,14 +1,20 @@
 package uvsq21603110;
 
-public class CalculatriceRPN
+enum CalculatriceRPN
 {
-    public static void main( String[] args ) {
+    ENVIRONNEMENT;
 
-        MoteurRPN mrpn = new MoteurRPN();
-        SaisieRPN s = new SaisieRPN(mrpn);
+    public void run(String[] args){
+        MoteurRPN rpn = new MoteurRPN();
+        SaisieRPN s = new SaisieRPN(rpn);
         while(true) {
 
             s.Saisie();
+            System.out.println(rpn.retourner());
         }
+    }
+
+    public static void main( String[] args ) {
+        ENVIRONNEMENT.run(args);
     }
 }

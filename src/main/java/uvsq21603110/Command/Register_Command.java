@@ -20,6 +20,5 @@ public class Register_Command implements Commande {
     @Override
     public void apply() {
         this.rpn.pile.push(valeur);
-        System.out.println(this.rpn.retourner());
     }
 }
