@@ -20,9 +20,9 @@ public enum Operation {
         }
     },
     DIV('/'){
-        public double eval (double op1, double op2){
+        public double eval (double op1, double op2)throws DivisionPar0{
             if (op1 == 0){
-                return 0;
+                throw new DivisionPar0();
             }else {
                 return op2 / op1;
             }
@@ -39,5 +39,5 @@ public enum Operation {
         return this.symbole;
     }
 
-    public abstract double eval(double op1, double op2);
+    public abstract double eval(double op1, double op2) throws DivisionPar0;
 }
