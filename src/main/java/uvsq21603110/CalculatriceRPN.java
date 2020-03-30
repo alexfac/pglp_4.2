@@ -7,6 +7,7 @@ enum CalculatriceRPN
     public void run(String[] args){
         MoteurRPN rpn = new MoteurRPN();
         SaisieRPN s = new SaisieRPN(rpn);
+        System.out.println("undo pour retourner en arriere et exit pour quitter");
         while(true) {
 
             s.Saisie();
