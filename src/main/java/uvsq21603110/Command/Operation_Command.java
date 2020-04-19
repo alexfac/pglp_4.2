@@ -7,30 +7,30 @@ import uvsq21603110.Operation;
 
 public class Operation_Command implements Commande {
 
-    private MoteurRPN rpn;
-    private Operation op;
+  private MoteurRPN rpn;
+  private Operation op;
 
-    public Operation_Command(MoteurRPN rpn, Operation op){
+  public Operation_Command(MoteurRPN rpn, Operation op) {
 
-        this.rpn = rpn;
-        this.op = op;
-    }
+    this.rpn = rpn;
+    this.op = op;
+  }
 
-    public void registerOperateur(Operation op){
-        this.op = op;
-    }
+  public void registerOperateur(Operation op) {
+    this.op = op;
+  }
 
-    @Override
-    public void apply() {
+  @Override
+  public void apply() {
 
-        double res = 0;
-        if (this.rpn.pile.size() >= 2) {
-            try {
-                res = op.eval(this.rpn.pile.pop(), this.rpn.pile.pop());
-                this.rpn.enregistrer(res);
-            } catch (DivisionPar0 divisionPar0) {
-                divisionPar0.printStackTrace();
-            }
-        }else System.out.println("Pas assez d'operandes");
-    }
+    double res = 0;
+    if (this.rpn.pile.size() >= 2) {
+      try {
+        res = op.eval(this.rpn.pile.pop(), this.rpn.pile.pop());
+        this.rpn.enregistrer(res);
+      } catch (DivisionPar0 divisionPar0) {
+        divisionPar0.printStackTrace();
+      }
+    } else System.out.println("Pas assez d'operandes");
+  }
 }

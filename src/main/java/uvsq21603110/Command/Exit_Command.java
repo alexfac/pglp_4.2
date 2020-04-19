@@ -5,14 +5,14 @@ import uvsq21603110.Interpreteur;
 
 public class Exit_Command implements Commande {
 
-    private Interpreteur interpre;
+  private Interpreteur interpre;
 
-    public Exit_Command(Interpreteur interpre){
-        this.interpre = interpre;
-    }
+  public Exit_Command(Interpreteur interpre) {
+    this.interpre = interpre;
+  }
 
-    @Override
-    public void apply() {
-        this.interpre.exit();
-    }
+  @Override
+  public void apply() {
+    this.interpre.exit();
+  }
 }
