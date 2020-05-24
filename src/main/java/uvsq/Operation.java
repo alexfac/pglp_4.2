@@ -1,4 +1,4 @@
-package uvsq21603110;
+package uvsq;
 
 public enum Operation {
   PLUS('+') {
@@ -19,6 +19,13 @@ public enum Operation {
     }
   },
   DIV('/') {
+    /**
+     * evaluation.
+     * @param op1 operande1
+     * @param op2 operande2
+     * @return resultat
+     * @throws DivisionPar0 exception
+     */
     public double eval(double op1, double op2) throws DivisionPar0 {
       if (op1 == 0) {
         throw new DivisionPar0();

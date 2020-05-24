@@ -1,4 +1,4 @@
-package uvsq21603110;
+package uvsq;
 
 public class DivisionPar0 extends Exception {
   public DivisionPar0() {

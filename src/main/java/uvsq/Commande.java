@@ -1,4 +1,4 @@
-package uvsq21603110;
+package uvsq;
 
 public interface Commande {
   void apply();

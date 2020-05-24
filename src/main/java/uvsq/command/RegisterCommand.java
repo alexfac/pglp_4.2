@@ -1,14 +1,14 @@
-package uvsq21603110.Command;
+package uvsq.command;
 
-import uvsq21603110.Commande;
-import uvsq21603110.MoteurRPN;
+import uvsq.Commande;
+import uvsq.MoteurRpn;
 
-public class Register_Command implements Commande {
+public class RegisterCommand implements Commande {
 
-  private MoteurRPN rpn;
+  private MoteurRpn rpn;
   private double valeur;
 
-  public Register_Command(MoteurRPN rpn, double valeur) {
+  public RegisterCommand(MoteurRpn rpn, double valeur) {
     this.rpn = rpn;
     this.valeur = valeur;
   }

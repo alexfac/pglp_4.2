@@ -1,11 +1,11 @@
-package uvsq21603110;
+package uvsq;
 
-enum CalculatriceRPN {
+enum CalculatriceRpn {
   ENVIRONNEMENT;
 
   public void run(String[] args) {
-    MoteurRPN rpn = new MoteurRPN();
-    SaisieRPN s = new SaisieRPN(rpn);
+    MoteurRpn rpn = new MoteurRpn();
+    SaisieRpn s = new SaisieRpn(rpn);
     System.out.println("undo pour retourner en arriere et exit pour quitter");
     while (true) {
 

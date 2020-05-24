@@ -1,16 +1,21 @@
-package uvsq21603110.Command;
+package uvsq.command;
 
-import uvsq21603110.Commande;
-import uvsq21603110.DivisionPar0;
-import uvsq21603110.MoteurRPN;
-import uvsq21603110.Operation;
+import uvsq.Commande;
+import uvsq.DivisionPar0;
+import uvsq.MoteurRpn;
+import uvsq.Operation;
 
-public class Operation_Command implements Commande {
+public class OperationCommand implements Commande {
 
-  private MoteurRPN rpn;
+  private MoteurRpn rpn;
   private Operation op;
 
-  public Operation_Command(MoteurRPN rpn, Operation op) {
+  /**
+   * Constructeur operation.
+   * @param rpn moteur
+   * @param op operation
+   */
+  public OperationCommand(MoteurRpn rpn, Operation op) {
 
     this.rpn = rpn;
     this.op = op;
@@ -31,6 +36,8 @@ public class Operation_Command implements Commande {
       } catch (DivisionPar0 divisionPar0) {
         divisionPar0.printStackTrace();
       }
-    } else System.out.println("Pas assez d'operandes");
+    } else {
+      System.out.println("Pas assez d'operandes");
+    }
   }
 }

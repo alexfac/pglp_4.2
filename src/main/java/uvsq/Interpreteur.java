@@ -1,4 +1,4 @@
-package uvsq21603110;
+package uvsq;
 
 import java.util.Stack;
 
@@ -13,6 +13,9 @@ public class Interpreteur {
     System.exit(0);
   }
 
+  /**
+   * Retour en arriere.
+   */
   public void undo() {
     if (this.pile.size() >= 1) {
       this.pile.pop();
